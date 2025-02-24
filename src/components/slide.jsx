@@ -24,8 +24,14 @@ export default function NewsSlider() {
         <h2>{newsData[currentIndex].title}</h2>
         <p>{newsData[currentIndex].content}</p>
 
-        <div className="card-indicators">
-        
+        <div className="indicators">
+          {newsData.map((_, idx) => (
+            <button
+              key={idx}
+              className={currentIndex === idx ? "indicator" : "indicator indicator-inactive"}
+              onClick={() => setCurrentIndex(idx)}
+            ></button>
+          ))}
         </div>
         
       </div>
@@ -33,7 +39,6 @@ export default function NewsSlider() {
         <img src={newsData[currentIndex].pictureUrl} alt={newsData[currentIndex].title} />
       </div>
 
-     
       
     </div>
 

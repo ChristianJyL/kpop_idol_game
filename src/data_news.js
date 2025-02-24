@@ -7,8 +7,8 @@ export default [
     },
     {
       id: 2,
-      title: "Recent Adoptions",
-      content: "Discover the stories of the dogs recently adopted.",
-      pictureUrl: "https://dog-center.com/api/news/2.png",
+      title: "Title",
+      content: "Ceci est le contenu du textgzgzgzge dgzqgzqgzqgzqgqgze la news, blabla,après là on a la suite est puis voilà quoi....",
+      pictureUrl: "../public/image/san.png",
     },
 ]
