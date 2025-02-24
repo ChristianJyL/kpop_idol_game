@@ -1,9 +1,9 @@
 export default [
     {
       id: 1,
-      title: "Open House Day",
-      content: "Join us for an open house day this weekend.",
-      pictureUrl: "https://dog-center.com/api/news/1.png",
+      title: "Title",
+      content: "Ceci est le contenu du texte de la news, blabla,après là on a la suite est puis voilà quoi....",
+      pictureUrl: "../public/image/minji.png",
     },
     {
       id: 2,
