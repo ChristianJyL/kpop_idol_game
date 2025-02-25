@@ -5,7 +5,11 @@
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    background-color: #f0f0f0;
+    transition: transform 0.3s ease;
+}
+
+#idol-card:hover {
+    transform: scale(1.05);
 }
 
 #idol-card img {
@@ -13,16 +17,61 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+    display: block;
+}
+
+#idol-card .idol-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#idol-card .idol-image-wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
 }
 
 #idol-card h3 {
     font-size: 1.5rem;
     margin: 0;
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
     padding: 5px;
     border-radius: 5px;
+}
+
+#idol-card #idol-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0px 15px 0px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0 0 10px 10px;
+    transition: height 0.3s ease;
+    overflow: hidden;
+    height: 60px; /* Hauteur initiale */
+}
+
+#idol-card:hover #idol-description {
+    height: 300px; /* Hauteur lors du survol */
+    padding: 0px 0px 0px 0px;
+
+}
+
+#idol-card .idol-extra-info {
+    display: none;
+}
+
+#idol-card:hover .idol-extra-info {
+    display: block;
+    margin-top: 50px;
 }

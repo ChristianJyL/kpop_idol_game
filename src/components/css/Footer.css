@@ -3,41 +3,34 @@
     color : var(--text-secondary-color);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 250px;
     margin-top: 5%;
-
-}   
+    width: 100%;
+    height: 280px;
+}
 
 .footer-content{
     display: flex;
-    justify-content: space-around;
     align-items: center;
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 4%;
+    padding-top: 6%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center ;
 }
 
 .footer-content h3{
-    font-family: 'Poppins', sans-serif;
     font-size: 1.75rem;
-    font-weight: 800;
+    font-weight: 900;
 }
 
 .footer-content p{
-    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-}
-
-.footer-content .footer-right h3{
-    text-align: right;
-    
 }
 
 
 .footer-content .footer-right p{
-    text-align: right;
-    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     font-weight: regular;
 }

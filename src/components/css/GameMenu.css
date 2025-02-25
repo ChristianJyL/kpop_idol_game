@@ -13,7 +13,7 @@
   .game-card {
     background-color: #5a4b8c;
     color: white;
-    padding: 10px 40px 10px 17px;
+    padding: 15px 70px 15px 17px;
     border-radius: 10px;
     text-align: left;
     cursor: pointer;
@@ -21,13 +21,11 @@
   }
 
   .game-card h3 {
-    font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
   }
 
   .game-card p {
-    font-family: 'Poppins', sans-serif;
     font-weight: regular;
   }
   

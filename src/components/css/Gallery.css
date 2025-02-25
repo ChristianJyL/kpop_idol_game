@@ -1,3 +1,12 @@
 .gallery-container{
-    color : var(--primary-color)
+    color : var(--primary-color);
+}
+
+.gallery-container h1{
+    display: flex;
+    align-items: center;
+}
+
+.reload-icon {
+    cursor: pointer;
 }

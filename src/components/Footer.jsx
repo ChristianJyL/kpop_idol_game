@@ -9,8 +9,8 @@ export default function Footer() {
             <div className='footer-content'>
                 <div className='footer-left'>
                     <h3>KWHO</h3>
-                    <p>Votre site blablablabzaogpjzagjopzagjzopagjpozag<br/>
-                        jopzaigjzopagjoazpgjopzagjozapgjopzagjopzagjopzagozagop
+                    <p>Votre site blablablabzaogp<br/>
+                        jopzaigjzopagjoazp
 
                     </p>
                     </div>

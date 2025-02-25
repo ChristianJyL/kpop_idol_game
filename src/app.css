@@ -16,28 +16,28 @@
 /* Poppins */
 @font-face {
     font-family: 'Poppins';
-    src: url('/assets/fonts/Poppins/Poppins-Regular.ttf') format('ttf');
+    src: url('./assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Poppins';
-    src: url('/assets/fonts/Poppins/Poppins-Bold.ttf') format('ttf');
+    src: url('./assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Poppins';
-    src: url('/assets/fonts/Poppins/Poppins-ExtraBold.ttf') format('ttf');
+    src: url('./assets/fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
   }
   
   @font-face {
     font-family: 'Poppins';
-    src: url('/assets/fonts/Poppins/Poppins-Black.ttf') format('ttf');
+    src: url('./assets/fonts/Poppins/Poppins-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
   }
@@ -45,20 +45,20 @@
   /* Inter */
   @font-face {
     font-family: 'Inter';
-    src: url('/assets/fonts/Inter/static/Inter_28pt-Regular.ttf') format('ttf');
+    src: url('./assets/fonts/Inter/static/Inter_28pt-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'Inter';
-    src: url('/assets/fonts/Inter/static/Inter_28pt-ExtraLight.ttf') format('ttf');
+    src: url('./assets/fonts/Inter/static/Inter_28pt-ExtraLight.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
   }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     background-color: var(--background-primary-color);
     color:  var(--text-primary-color);
 }
@@ -67,6 +67,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
 }
 
 .bodyApp {
@@ -84,4 +85,5 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
