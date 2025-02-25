@@ -1,4 +1,4 @@
-import "./IdolCard.css";
+import "./css/IdolCard.css";
 
 export default function IdolCard({name, image}) {
     return (

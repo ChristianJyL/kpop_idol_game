@@ -1,25 +1,23 @@
 import { useState } from "react";
+import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 import newsData from "../data_news.js";
-import "./slide.css";
+import "./css/Slide.css";
 
 export default function NewsSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const selectPrevious = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prevIndex) => prevIndex - 1);
-    }
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? newsData.length - 1 : prevIndex - 1));
   };
 
   const selectNext = () => {
-    if (currentIndex < newsData.length - 1) {
-      setCurrentIndex((prevIndex) => prevIndex + 1);
-    }
+    setCurrentIndex((prevIndex) => (prevIndex === newsData.length - 1 ? 0 : prevIndex + 1));
   };
 
   return (
-
     <div className="card">
+    <BsArrowLeftCircleFill onClick={selectPrevious} className="arrow arrow-left" />
+
       <div className="card-content">
         <h2>{newsData[currentIndex].title}</h2>
         <p>{newsData[currentIndex].content}</p>
@@ -38,8 +36,7 @@ export default function NewsSlider() {
       <div className="card-image">
         <img src={newsData[currentIndex].pictureUrl} alt={newsData[currentIndex].title} />
       </div>
-
-      
+    <BsArrowRightCircleFill onClick={selectNext} className="arrow arrow-right" />
     </div>
 
   );

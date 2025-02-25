@@ -1,7 +1,10 @@
 import IdolCard from "./components/IdolCard"
-import NewsSlider from "./components/slide"
+import NewsSlider from "./components/Slide.jsx"
 import idolsData from "./data_Idol.js";
-import Navbar from "./components/navbar.jsx";
+import Navbar from "./components/Navbar.jsx";
+import Gallery from "./components/Gallery.jsx";
+import GameMenu from "./components/GameMenu.jsx";
+import Footer from "./components/Footer.jsx";
 import "./app.css";
 
 
@@ -12,15 +15,15 @@ export default function App(){
     <div>
       <Navbar/>
 
-      <div className="body">
+      <div className="bodyApp">
+        <NewsSlider />
 
-      <NewsSlider />
-     
-
-
-      
-
+        <div className="column">
+          <Gallery/>
+          <GameMenu/>
+        </div>
       </div>
+      <Footer/>
       
       
     </div>);
