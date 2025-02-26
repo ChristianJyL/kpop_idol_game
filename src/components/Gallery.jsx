@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './css/Gallery.css';
 import idolsData from "../data_Idol.js";
+import IdolCard from "./IdolCard.jsx";
 import { TbReload } from "react-icons/tb";
 
 
@@ -19,16 +20,14 @@ export default function Gallery() {
             
             <div id="idol-gallery">
                 {randomIdols.map((idol) => (
-                    <div id="idol-card">
-                        <img
-                            id="idol-picture"
-                            src={idol["Image Link"]}
-                            alt="idol"
-                        />
-                        <div id="idol-description">
-                            <h3>{idol["Stage Name"]}</h3>
-                        </div>
-                    </div>
+                    <IdolCard 
+                              name={idol["Stage Name"]}
+                              groupName={idol["Group"]}
+                              birthDate={idol["Date of Birth"]}
+                              height={idol["Height"]}
+                              origin={idol["Country"]}
+                              image={idol["Image Link"]}
+                            />
                 ))}
             </div>
         </div>
