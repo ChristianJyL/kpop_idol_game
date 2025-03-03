@@ -1,0 +1,60 @@
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.image-area {
+  background: #FFC400;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
+.image-area img {
+  height: 85%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.stats {
+  background: #4C4371;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 150px;
+}
+
+.stats p {
+  margin: 5px 0;
+}
+
+
+.game-area {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.options button {
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 15px 10px 15px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.options button:hover {
+  background: var(--background-secondary-color);
+}
