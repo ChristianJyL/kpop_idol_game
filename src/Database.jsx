@@ -101,56 +101,69 @@ export default function Database() {
       <Navbar />
       <div className="bodyApp">
         <div id="gallery-options">
-          <input
-            type="text"
-            placeholder="Search Idol"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
+          <div className="filter-section search-section">
+            <input
+              type="text"
+              placeholder="Search Idol"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="search-input"
+            />
+          </div>
 
-          <label>Génération </label>
-          {["all", "1st", "2nd", "3rd", "4th"].map((gen) => (
-            <button
-              key={gen}
-              onClick={() => handleGenerationClick(gen)}
-              className={
-                (gen === "all" && idolsGeneration.includes("all")) ||
-                  (gen !== "all" && idolsGeneration.includes(gen))
-                  ? "active"
-                  : ""
-              }
+          <div className="filter-section generation-section">
+            <label>Generation</label>
+            <div className="button-group">
+              {["all", "1st", "2nd", "3rd", "4th"].map((gen) => (
+                <button
+                  key={gen}
+                  onClick={() => handleGenerationClick(gen)}
+                  className={
+                    (gen === "all" && idolsGeneration.includes("all")) ||
+                      (gen !== "all" && idolsGeneration.includes(gen))
+                      ? "active"
+                      : ""
+                  }
+                >
+                  {gen}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="filter-section sort-section">
+            <label htmlFor="idol-sort">Sort by</label>
+            <select
+              id="idol-sort"
+              value={idolsSortBy}
+              onChange={(e) => setIdolsSortBy(e.target.value)}
+              className="sort-select"
             >
-              {gen}
-            </button>
-          ))}
+              <option value="name">Name</option>
+              <option value="age">Age</option>
+              <option value="Group">Group</option>
+              <option value="origin">Origin</option>
+              <option value="Height">Height</option>
+            </select>
+          </div>
 
-          <label htmlFor="idol-sort">Sort by : </label>
-          <select
-            id="idol-sort"
-            value={idolsSortBy}
-            onChange={(e) => setIdolsSortBy(e.target.value)}
-          >
-            <option value="name">Name</option>
-            <option value="age">Age</option>
-            <option value="Group">Group</option>
-            <option value="origin">Origin</option>
-            <option value="Height">Height</option>
-          </select>
-
-          <label>Age</label>
-          <MultiRangeSlider
-            min={minAge}
-            max={maxAge}
-            onChange={(range) => {
-              setAgeRange((prev) => {
-                if (prev.min !== range.min || prev.max !== range.max) {
-                  return range;
-                }
-                return prev;
-              });
-            }}
-          />
-
+          <div className="filter-section age-section">
+            <label>Age</label>
+            <div className="slider-container">
+              <MultiRangeSlider
+                min={minAge}
+                max={maxAge}
+                onChange={(range) => {
+                  setAgeRange((prev) => {
+                    if (prev.min !== range.min || prev.max !== range.max) {
+                      return range;
+                    }
+                    return prev;
+                  });
+                }}
+              />
+            </div>
+          </div>
         </div>
 
         <Gallery listIdols={filteredIdols} />
