@@ -87,3 +87,37 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+
+#gallery-options button {
+    background-color: transparent;
+    border: 1px solid;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    padding: 5px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+#gallery-options button:hover {
+    background-color: var(--background-secondary-color);
+    border-color: var(--background-secondary-color); 
+    color: var(--text-primary-color);
+}
+
+#gallery-options button:active {
+    background-color: var(--background-secondary-color);
+    border-color: var(--background-secondary-color); 
+    color: var(--text-primary-color);
+}
+
+
+#gallery-options button.active {
+    background-color: var(--background-secondary-color);
+    border-color: var(--background-secondary-color); 
+    color: var(--text-primary-color);
+}
+

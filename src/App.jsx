@@ -1,8 +1,9 @@
 import IdolCard from "./components/IdolCard"
 import NewsSlider from "./components/Slide.jsx"
-import idolsData from "./data_Idol.js";
+
 import Navbar from "./components/Navbar.jsx";
-import Gallery from "./components/Gallery.jsx";
+import GalleryHome from "./components/GalleryHome.jsx"
+
 import GameMenu from "./components/GameMenu.jsx";
 import Footer from "./components/Footer.jsx";
 import "./app.css";
@@ -19,7 +20,7 @@ export default function App(){
         <NewsSlider />
 
         <div className="column">
-          <Gallery/>
+          <GalleryHome/>
           <GameMenu/>
         </div>
       </div>
