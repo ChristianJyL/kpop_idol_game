@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import Gallery from "../Gallery.jsx";
+import Gallery from "../commun/Gallery.jsx";
 
 export default function DatabaseContent({ 
   idolsData,

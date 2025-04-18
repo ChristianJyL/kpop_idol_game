@@ -1,5 +1,5 @@
 import React from "react";
-import "./css/GameMenu.css"; 
+import "../../css/GameMenu.css"; 
 import { Link } from "react-router-dom";
 
 /*This component is used to display the game menu. 

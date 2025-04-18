@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './css/Gallery.css';
+import '../../css/Gallery.css';
 import IdolCard from "./IdolCard.jsx";
 
 

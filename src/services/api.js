@@ -4,7 +4,7 @@ const getIdolsData = async () => {
     const data = await response.json();
     return data;
   }
-  throw new Error("Impossible de récupérer les données des idols");
+  throw new Error("Impossible to retrieve idols data");
 };
 
 const getNewsData = async () => {
@@ -13,7 +13,7 @@ const getNewsData = async () => {
     const data = await response.json();
     return data;
   }
-  throw new Error("Impossible de récupérer les données des news");
+  throw new Error("Impossible to retrieve news data");
 };
 
 export { getIdolsData, getNewsData };

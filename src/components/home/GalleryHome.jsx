@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './css/Gallery.css';
-import Gallery from './Gallery.jsx';
-import { getIdolsData } from "../services/api";
+import '../../css/Gallery.css';
+import Gallery from '../commun/Gallery.jsx';
+import { getIdolsData } from "../../services/api.js";
 import { TbReload } from "react-icons/tb";
 
 export default function GalleryHome() {

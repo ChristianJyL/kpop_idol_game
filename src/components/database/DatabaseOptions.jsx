@@ -1,5 +1,5 @@
 import React from "react";
-import MultiRangeSlider from "../MultiRangeSlider.jsx";
+import MultiRangeSlider from "./MultiRangeSlider.jsx";
 
 export default function DatabaseOptions({
   search,

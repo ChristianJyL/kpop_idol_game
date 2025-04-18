@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
-import { getNewsData } from "../services/api";
-import "./css/Slide.css";
+import { getNewsData } from "../../services/api";
+import "../../css/Slide.css";
 
 export default function NewsSlider() {
     const [newsData, setNewsData] = useState([]);

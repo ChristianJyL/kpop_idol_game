@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
-import Navbar from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
+import Navbar from "./components/commun/Header.jsx";
+import Footer from "./components/commun/Footer.jsx";
 import { getIdolsData } from "./services/api";
 import DatabaseOptions from "./components/database/DatabaseOptions";
 import DatabaseContent from "./components/database/DatabaseContent";
 import LoadingState from "./components/database/LoadingState";
 import ErrorState from "./components/database/ErrorState";
-import "./app.css";
 
 export default function Database() {
   const hasSetInitialAgeRange = useRef(false);

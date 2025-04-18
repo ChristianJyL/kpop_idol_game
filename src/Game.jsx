@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import Navbar from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
+import Navbar from "./components/commun/Header.jsx";
+import Footer from "./components/commun/Footer.jsx";
 import { getIdolsData } from "./services/api";
 import GameStats from "./components/game/GameStats.jsx";
 import GameOptions from "./components/game/GameOptions.jsx";
 import GameImage from "./components/game/GameImage.jsx";
 import ErrorState from "./components/database/ErrorState.jsx";
-import "./app.css";
-import "./game.css";
+import "./css/Game.css";
 
 export default function Game() {
   //Game data

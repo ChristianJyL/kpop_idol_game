@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/Footer.css';
+import '../../css/Footer.css';
 
 
 export default function Footer() {
@@ -9,16 +9,15 @@ export default function Footer() {
             <div className='footer-content'>
                 <div className='footer-left'>
                     <h3>KWHO</h3>
-                    <p>Votre site blablablabzaogp<br/>
-                        jopzaigjzopagjoazp
-
+                    <p>Your ultimate K-Pop database<br/>
+                        Play games while learning about your favorite idols
                     </p>
                     </div>
                 <div className='footer-right'>
-                    <h3>CONTACTEZ-NOUS</h3>
+                    <h3>CONTACT US</h3>
                     <p>30 rue Sainte IMAC, 75001 Paris France<br/>
                         +33 6 98 17 86 83 <br/>
-                        contact@tv-rizz.com</p>
+                        contact@KWHO.com</p>
 
                     </div>
             </div>

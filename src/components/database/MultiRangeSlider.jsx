@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
-import "./css/MultiRangeSlider.css";
+import "../../css/MultiRangeSlider.css";
 
 const MultiRangeSlider = ({ min, max, initialMin, initialMax, onChange }) => {
   // Initialiser avec les valeurs initiales ou par défaut

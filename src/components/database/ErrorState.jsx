@@ -1,7 +1,7 @@
 
 import React from "react";
-import Navbar from "../Header.jsx";
-import Footer from "../Footer.jsx";
+import Navbar from "../commun/Header.jsx";
+import Footer from "../commun/Footer.jsx";
 
 export default function ErrorState({message}) {
   return (
