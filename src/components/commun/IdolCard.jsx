@@ -10,10 +10,10 @@ export default function IdolCard({ name, groupName, image, birthDate, height, or
                 <h3>{name}</h3>
                 <p>{groupName}</p>
                 <div className="idol-extra-info">
-                    <p><strong>Date de naissance: </strong><br/> {birthDate}</p>
-                    <p><strong>Taille:</strong> {height}</p>
+                    <p><strong>Date of birth: </strong><br/> {birthDate}</p>
+                    <p><strong>Size:</strong> {height}</p>
                     <p><strong>Age:</strong> {new Date().getFullYear() - new Date(birthDate).getFullYear()}</p>
-                    <p><strong>Origine : </strong> {origin}</p>
+                    <p><strong>Origin : </strong> {origin}</p>
                 </div>
             </div>
         </div>
