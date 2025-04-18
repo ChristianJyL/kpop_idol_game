@@ -10,6 +10,7 @@
   width: 600px;
   height: 600px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
@@ -27,21 +28,74 @@
   color: white;
   padding: 15px;
   border-radius: 10px;
-  width: 150px;
+  width: 250px; /* Augmenté pour plus d'espace */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .stats p {
   margin: 5px 0;
 }
 
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3px 0;
+  padding: 8px 12px;
+  border-radius: 5px; 
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.stat-label {
+  font-weight: bold;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.stat-value {
+  font-weight: normal;
+  text-align: right;
+}
+
+.reset-btn {
+  margin-top: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+.reset-btn:hover {
+  background-color: var(--background-secondary-color);
+}
 
 .game-area {
- 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+}
+
+.message-container {
+  margin: 10px 0;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1em;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  width: 80%;
+  max-width: 600px;
 }
 
 .options button {

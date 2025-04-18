@@ -8,8 +8,6 @@
     gap: 10px;
     padding: 20px;
   }
-  
-
   .game-card {
     background-color: #5a4b8c;
     color: white;
@@ -21,12 +19,13 @@
   }
 
   .game-card h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
   }
 
   .game-card p {
     font-weight: regular;
+    font-size: 1.2rem;
   }
   
   .game-card:hover {
@@ -34,3 +33,4 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   
+

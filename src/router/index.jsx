@@ -14,7 +14,7 @@ export default createBrowserRouter([
   },
 
   {
-    path: "/games",
+    path: "/game",
     element: <Game />,
   },
  

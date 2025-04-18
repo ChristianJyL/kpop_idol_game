@@ -10,7 +10,7 @@
     margin-top: 100px;
     margin-bottom: 50px;
     justify-content: space-around;
-    background-image: url('../public/image/deco.svg');
+    background-image: url('/public/image/deco.svg');
     background-repeat: round;
 }
 

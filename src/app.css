@@ -1,9 +1,10 @@
+/* ---------- RESET ---------- */
 * {
     margin: 0;
     padding: 0;
 }
 
-/* styles.css */
+/* ---------- VARIABLES ---------- */
 :root {
     --primary-color: #505082;
     --secondary-color: #46487B;
@@ -11,72 +12,72 @@
     --text-secondary-color: #454545;
     --background-primary-color: #F1EBDA;
     --background-secondary-color: #FDC614;
-  }
+    --game-card-bg-color: #5a4b8c;
+    --box-shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --box-shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --border-radius-standard: 10px;
+    --border-radius-rounded: 25px;
+}
 
+/* ---------- FONTS ---------- */
 /* Poppins */
 @font-face {
     font-family: 'Poppins';
     src: url('./assets/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
-  }
+}
   
-  @font-face {
+@font-face {
     font-family: 'Poppins';
     src: url('./assets/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
-  }
+}
   
-  @font-face {
+@font-face {
     font-family: 'Poppins';
     src: url('./assets/fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
-  }
+}
   
-  @font-face {
+@font-face {
     font-family: 'Poppins';
     src: url('./assets/fonts/Poppins/Poppins-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
-  }
+}
 
-  /* Inter */
-  @font-face {
+/* Inter */
+@font-face {
     font-family: 'Inter';
     src: url('./assets/fonts/Inter/static/Inter_28pt-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'Inter';
     src: url('./assets/fonts/Inter/static/Inter_28pt-ExtraLight.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
-  }
+}
 
+/* ---------- BASE STYLES ---------- */
 body {
     font-family: 'Poppins', sans-serif !important;
     background-color: var(--background-primary-color);
-    color:  var(--text-primary-color);
-}
-
-#idol-gallery{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
+    color: var(--text-primary-color);
 }
 
 .bodyApp {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .column {
@@ -88,16 +89,28 @@ body {
     flex-wrap: wrap;
 }
 
-/* Gallery Filter Options */
+/* ---------- IDOL GALLERY ---------- */
+#idol-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#game-menu-container {
+    color: var(--primary-color);
+}
+
+/* ---------- GALLERY FILTER OPTIONS ---------- */
 #gallery-options {
     display: flex;
     flex-direction: column;
     background-color: var(--text-primary-color);
-    border-radius: 10px;
+    border-radius: var(--border-radius-standard);
     padding: 20px;
     margin-bottom: 30px;
-    margin-top : 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    box-shadow: var(--box-shadow-light);
     width: 90%;
     max-width: 1000px;
 }
@@ -138,7 +151,7 @@ body {
     max-width: 1000px; 
     padding: 10px 15px;
     border: 1px solid #ddd;
-    border-radius: 25px;
+    border-radius: var(--border-radius-rounded);
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s;
@@ -160,7 +173,7 @@ body {
     color: var(--primary-color);
     padding: 8px 20px;
     cursor: pointer;
-    border-radius: 25px;
+    border-radius: var(--border-radius-rounded);
     font-size: 0.9rem;
     font-weight: 600;
     transition: all 0.2s ease;
@@ -176,7 +189,7 @@ body {
     background-color: var(--background-secondary-color);
     border-color: var(--background-secondary-color); 
     color: var(--text-primary-color);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--box-shadow-light);
     transform: translateY(-1px);
 }
 
@@ -185,7 +198,7 @@ body {
     width: 100%;
     padding: 8px 15px;
     border: 1px solid #ddd;
-    border-radius: 25px;
+    border-radius: var(--border-radius-rounded);
     font-size: 1rem;
     background-color: white;
     color: var(--text-secondary-color);
@@ -198,7 +211,95 @@ body {
     padding: 0 10px;
 }
 
-/* Responsive layout */
+/* ---------- LOADING & ERROR STATES ---------- */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #09f;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* No results message */
+.no-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 120px auto;
+    padding: 50px;
+    background-color: white;
+    border-radius: var(--border-radius-standard);
+    box-shadow: var(--box-shadow-light);
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.no-results-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.no-results h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.no-results p {
+    color: var(--text-secondary-color);
+    font-size: 1.2rem;
+}
+
+/* ---------- GAME COMPONENTS ---------- */
+.game-card {
+    background-color: var(--game-card-bg-color);
+    color: white;
+    padding: 15px 70px 15px 17px;
+    border-radius: var(--border-radius-standard);
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.game-card h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.game-card p {
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+  
+.game-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-medium);
+}
+
+/* ---------- RESPONSIVE LAYOUT ---------- */
 @media (min-width: 980px) {
     #gallery-options {
         flex-direction: row;
@@ -235,4 +336,3 @@ body {
         align-items: center;
     }
 }
-
