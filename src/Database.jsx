@@ -63,15 +63,17 @@ export default function Database() {
     };
   }, [idolsData]);
 
-  //Initialise age range if it is not set
+    //Initialise age range if it is not set 
   useEffect(() => {
     if (idolsData?.length > 0 && !hasSetInitialAgeRange.current) { //verification if it is not set to not have infinite loop
       if (ageRange.min === 0 && ageRange.max === 100) {
         hasSetInitialAgeRange.current = true;
         setAgeRange({ min: minMaxAge.min, max: minMaxAge.max });
+      } else {
+        hasSetInitialAgeRange.current = true;
       }
     }
-  }, [minMaxAge, idolsData, ageRange.min, ageRange.max]);
+  }, [idolsData, minMaxAge]);
 
   //Error and loading pages
   if (error) return <ErrorState message={error} />;

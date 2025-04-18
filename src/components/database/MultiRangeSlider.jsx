@@ -15,6 +15,18 @@ const MultiRangeSlider = ({ min, max, initialMin, initialMax, onChange }) => {
   // Référence pour éviter les mises à jour au premier rendu
   const isFirstRender = useRef(true);
 
+  // Met à jour la position de la barre de sélection immédiatement après le montage
+  useEffect(() => {
+    // Force l'initialisation correcte dès le premier rendu
+    if (rangeRef.current) {
+      const minPercent = ((minVal - min) / (max - min)) * 100;
+      const maxPercent = ((maxVal - min) / (max - min)) * 100;
+      
+      rangeRef.current.style.left = `${minPercent}%`;
+      rangeRef.current.style.width = `${maxPercent - minPercent}%`;
+    }
+  }, []);
+
   // Met à jour la position de la barre de sélection
   useEffect(() => {
     if (rangeRef.current) {
@@ -25,6 +37,16 @@ const MultiRangeSlider = ({ min, max, initialMin, initialMax, onChange }) => {
       rangeRef.current.style.width = `${maxPercent - minPercent}%`;
     }
   }, [minVal, maxVal, min, max]);
+
+  // Synchroniser avec les props si elles changent
+  useEffect(() => {
+    if (initialMin !== undefined && initialMin !== minVal) {
+      setMinVal(initialMin);
+    }
+    if (initialMax !== undefined && initialMax !== maxVal) {
+      setMaxVal(initialMax);
+    }
+  }, [initialMin, initialMax]);
 
   // Effect pour notifier le parent uniquement lorsque les valeurs changent réellement
   useEffect(() => {
@@ -44,18 +66,6 @@ const MultiRangeSlider = ({ min, max, initialMin, initialMax, onChange }) => {
       onChange({ min: minVal, max: maxVal });
     }
   }, [minVal, maxVal, onChange]);
-
-  // Mettre à jour les valeurs si min/max changent et qu'aucune valeur initiale n'a été fournie
-  useEffect(() => {
-    // Ne pas déclencher de re-rendus inutiles si nous avons des valeurs initiales
-    if (initialMin === undefined && initialMax === undefined) {
-      const newMinVal = min;
-      const newMaxVal = max;
-      
-      if (newMinVal !== minVal) setMinVal(newMinVal);
-      if (newMaxVal !== maxVal) setMaxVal(newMaxVal);
-    }
-  }, [min, max]);
 
   return (
     <div className="container">
